@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/content_horizontal_margin"
+        android:background="#fff"
+        android:layout_marginRight="@dimen/content_horizontal_margin"
+        android:padding="25dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/content_top_margin"
+        android:layout_marginBottom="@dimen/content_bottom_margin"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/content_bottom_margin"
+            android:src="@drawable/ic_icon"
+            />
+
+        <EditText
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Username"
+            android:layout_margin="@dimen/content_input_margin"
+            android:background="@drawable/border"
+            android:padding="@dimen/content_input_padding"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border"
+            android:layout_margin="@dimen/content_input_margin"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:paddingLeft="@dimen/content_input_padding"
+                android:layout_weight="0.85" />
+
+            <ImageView
+                android:id="@+id/togglePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_password"
+                android:layout_gravity="center"
+                android:layout_weight="0.15"
+                android:onClick="showHidePassword"
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            android:layout_margin="@dimen/content_input_margin"
+            android:textSize="@dimen/text_size"
+            android:onClick="login"
+            android:elevation="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/text_size"
+        android:text="@string/register"
+        android:onClick="register"
+        android:elevation="5dp"/>
+
+</LinearLayout>
